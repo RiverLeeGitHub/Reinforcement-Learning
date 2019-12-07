@@ -2,6 +2,7 @@
 
 Waiting to be updated
 
+'''
 .
 └── BlackBoxOptimization
     ├── __init__.py
@@ -40,3 +41,4 @@ Waiting to be updated
         ├── _tabular_softmax.py
         ├── skeleton.py      
         └── tabular_softmax.py      
+'''
