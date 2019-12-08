@@ -1,5 +1,7 @@
 # Reinforcement-Learning
 
+This repo contains my course homeworks and projects of reinforcement learning.
+
 Waiting to be updated
 
 
