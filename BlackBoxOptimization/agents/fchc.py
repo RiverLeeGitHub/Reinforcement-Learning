@@ -62,6 +62,5 @@ class FCHC(BBOAgent):
         return self._theta
 
     def reset(self) -> None:
-        # DONE
         [self._theta, self._Sigma] = self._backup
         self.J = self.evaluationFunction(self._theta, self.numEpisodes)
