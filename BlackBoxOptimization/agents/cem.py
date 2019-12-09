@@ -68,12 +68,9 @@ class CEM(BBOAgent):
 
     def train(self) -> np.ndarray:
         """
-        Perform a single iteration of the BBO algorithm. For example, this
-        means performing a single iteration of the while loop of the CEM
-        pseudocode located in the class notes.
+        Perform a single iteration of the BBO algorithm.
         :return: bestParameter
         """
-        # DONE
         estimations = []  # stored (theta, J) of each policy
         for k in range(self._popSize):
             # print("populate:",k)
@@ -102,7 +99,6 @@ class CEM(BBOAgent):
         return self._theta
 
     def reset(self) -> None:
-        # DONE
         [self._theta, self._Sigma] = self._backup
         self._populations = []
         pass
