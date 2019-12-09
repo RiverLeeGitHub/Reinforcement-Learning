@@ -69,12 +69,6 @@ class GA(BBOAgent):
         output:
             child -- a mutated copy of the parent
         """
-        # # DONE
-        # children = []
-        # for i in range(len(parent)):
-        #     child = parent[i] + self._learningParameter * np.random.normal(loc=0, scale=1, size=parent.shape)
-        #     children.append(child)
-        # return np.array(children)
 
         child = parent + self._learningParameter * np.random.normal(0, 1, parent.shape[0])
         return child
@@ -89,7 +83,6 @@ class GA(BBOAgent):
                      fmt='o')
 
     def train(self) -> np.ndarray:
-        # DONE
         def _crossover(parent, numChlidren):
             children = []
             for i in range(numChlidren):
@@ -97,28 +90,18 @@ class GA(BBOAgent):
                 child = (couple[0] + couple[1]) / 2
                 children.append(child)
             return np.array(children)
-        #
-        # def get_parents(indexTruncation, sorted_estimations):
-        #     return sorted_estimations[:indexTruncation]
-        #
-        # def get_children(learningParameter, parents):
-        #     numChildren = self._populationSize - self._numElite
-        #     mutated = self._mutate(parents)
-        #     crossovered = _crossover(mutated, numChildren)
-        #     children = crossovered[:numChildren]
-        #     return children
 
         estimations = []
         for k in range(self._populationSize):
             returns = self._evaluationFunction(self._population[k], self._numEpisodes)
             J_estimated = np.sum(returns)
             estimations.append((self._population[k], J_estimated))
-        # print("estimation::",estimations)
+
         sorted_estimations = sorted(estimations, key=lambda x: x[1], reverse=True)
-        # print("sorted estimation::", sorted_estimations)
+
         parents = [list(sorted_estimations[i][0]) for i in range(len(sorted_estimations))][:self._indexTruncation]
         self._bestParameter = parents[0]
-        # print("parents::",parents)
+
         print("best:",sorted_estimations[0][1])
 
         numChildren = self._populationSize# - self._numElite
@@ -131,12 +114,12 @@ class GA(BBOAgent):
 
         children = _crossover(children, numChildren)
 
-        # print("children:::",(children))
+
         next_gen = parents+list(children)
         self._estimations = np.array(sorted_estimations)
         self._population = np.array(next_gen)
         return self._population
 
     def reset(self) -> None:
-        # TODO
-        self._population = self._initPopulationFunction(self._populationSize)  # TODO: set this value to the most recently created generation
+
+        self._population = self._initPopulationFunction(self._populationSize) 
