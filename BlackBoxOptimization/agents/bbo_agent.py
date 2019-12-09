@@ -19,9 +19,7 @@ class BBOAgent(Agent):
     @abstractmethod
     def train(self):
         """
-        Perform a single iteration of the BBO algorithm. For example, this 
-        means performing a single iteration of the while loop of the CEM 
-        pseudocode located in the class notes. 
+        Perform a single iteration of the BBO algorithm.
         
         output:
             bestParameter -- the best parameter found during the training iteration.
