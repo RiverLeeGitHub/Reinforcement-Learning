@@ -1,5 +1,8 @@
 Policy Improvement using HCOPE and CMA-ES
 
+This code is used for generating better policies given a provided policy and the histories it generates. Even though we doesn't know the exact MDP.
+
+This method is an easy implementation of my professor Philips Thomas's paper, which link is: https://people.cs.umass.edu/~pthomas/papers/Thomas2015c.pdf
 
 The requirement of running this code:
 
