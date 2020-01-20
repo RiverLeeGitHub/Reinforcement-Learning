@@ -12,7 +12,7 @@ Environment of RL is what the agents interact with during the whole process. It 
 
 ### Policies
 
-A Policy is a decision-making rule in reinforcement learning. An agent can use a policy to select actions to take in an environment. This folder contains a tabular softmax policy selector. For continuous state, we often use linear approximation to approximate the map between states and actions.
+A Policy is a decision-making rule in reinforcement learning. An agent can use a policy to select actions to take in an environment. This folder contains a tabular softmax policy selector. For continuous state, we often use linear approximation to approximate the map between the state and actions.
 
 
 
