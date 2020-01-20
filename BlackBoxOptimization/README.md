@@ -10,6 +10,10 @@ The agents in the folder stand for the BBO algorithms that optimize the objectiv
 
 Environment of RL is what the agents interact with during the whole process. It usually tells agents what state they are in and how many rewards they can get after taking an action in the state. There's two environments that are tested in the code: CartPole and GridWorld.
 
+### Policies
+
+
+
 
 
 
